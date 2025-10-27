@@ -50,18 +50,6 @@ lib/
 
 ## 🖼 App Screenshots
 
-### Main Dashboard
-![Dashboard](https://github.com/username/project-name/blob/main/screenshots/dashboard.png)
-
-### Nutrition Tracking
-![Nutrition](https://github.com/username/project-name/blob/main/screenshots/nutrition.png)
-
-### Mood Tracking
-![Mood](https://github.com/username/project-name/blob/main/screenshots/mood.png)
-
-### Workout Planning
-![Plan](https://github.com/username/project-name/blob/main/screenshots/plan.png)
-
 [View All Screenshots](https://github.com/username/project-name/tree/main/screenshots)
 
 ## 🎥 App Video
