@@ -58,4 +58,4 @@ lib/
 
 ## 📱 App APK
 
-[Download APK](https://github.com/username/project-name/releases/download/v1.0/app-release.apk)
+[Download APK](https://github.com/ansamnaveed/flutter_task/blob/main/releases/download/v1.0/app-release.apk)
