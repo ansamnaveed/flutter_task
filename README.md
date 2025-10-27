@@ -5,7 +5,7 @@
    - **flutter_svg**: Used for rendering the Svgs in the app.
    - **intl**:  Used for date formatting.
 
-**2. Project Structure**
+**2. Project Structure**\n
 	   lib/
        ├── models/ (Contains models of data used to show in the app.)
        ├── views/ (Contains screens/views of the app.)
