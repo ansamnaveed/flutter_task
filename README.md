@@ -50,7 +50,7 @@ lib/
 
 ## 🖼 App Screenshots
 
-[View All Screenshots](https://github.com/username/project-name/tree/main/screenshots)
+[View All Screenshots](https://github.com/ansamnaveed/flutter_task/tree/main/screenshots)
 
 ## 🎥 App Video
 
