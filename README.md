@@ -5,20 +5,30 @@
    - **flutter_svg**: Used for rendering the Svgs in the app.
    - **intl**:  Used for date formatting.
 
-**2. Project Structure**\n
+**2. Project Structure**
 	   lib/
-       ├── models/ (Contains models of data used to show in the app.)
-       ├── views/ (Contains screens/views of the app.)
-             ├── dashbooard/ (Contains the main/root widget of the app like the main view where the subviews are rendered (Bottom Bar).)
-                     ├── views/ (Contains the subviews of the main dashooard wiew.)
-                           ├── mood/ (Contains the main mood view and its components.)
-                                 ├── components/ (Contains the components and custom widgets used un the mood tab.)
-                           ├── nutrition/ (Contains the main nutrition view and its components.)
-                                 ├── components/ (Contains the components and custom widgets used un the nutrition tab.)
-                           ├── plan/ (Contains the main weekly plan view and its components.)
-                                 ├── components/ (Contains the components and custom widgets used un the plan tab.)
-       ├── controllers/ (Contains controllers for managing the views and updation.)
- 	     ├── utils/ (Contains publicly used components and widgets in the app. Like colors, images, icons, images and common text widget.)
+		├── controllers/                # Contains controllers for managing state and view updates.
+		│
+		├── models/                     # Contains data models used throughout the app.
+		│
+		├── utils/                      # Contains shared utilities, constants, and widgets (colors, icons, images, text widgets, etc.)
+		│
+		├── views/                      # Contains all screens and UI components.
+		│   ├── dashboard/              # Root widget containing the main dashboard and navigation.
+		│   │   └── views/              # Subviews rendered inside the dashboard (bottom navigation screens).
+		│   │       ├── mood/           # Main mood view and its related components.
+		│   │       │   └── components/ # Custom widgets used in the mood tab.
+		│   │       │
+		│   │       ├── nutrition/      # Main nutrition view and its related components.
+		│   │       │   └── components/ # Custom widgets used in the nutrition tab.
+		│   │       │
+		│   │       ├── plan/           # Main weekly plan view and its related components.
+		│   │           └── components/ # Custom widgets used in the plan tab.
+		│   │
+		│   └── ...                     # Other app views (e.g., onboarding, login, etc.)
+		│
+		└── main.dart                   # App entry point.
+
 
 **3. App Screenshots**
 **4. App Video**
