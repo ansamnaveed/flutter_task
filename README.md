@@ -6,7 +6,7 @@
    - **intl**:  Used for date formatting.
 
 **2. Project Structure**
-	   lib/
+	   '''lib/
 		├── controllers/                # Contains controllers for managing state and view updates.
 		│
 		├── models/                     # Contains data models used throughout the app.
@@ -27,7 +27,7 @@
 		│   │
 		│   └── ...                     # Other app views (e.g., onboarding, login, etc.)
 		│
-		└── main.dart                   # App entry point.
+		└── main.dart                   # App entry point.'''
 
 
 **3. App Screenshots**
