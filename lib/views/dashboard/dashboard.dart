@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task/controllers/dashboard_controller.dart';
 import 'package:task/utils/app_colors.dart';
-import 'package:task/utils/app_text.dart';
 
 class Dashboard extends StatelessWidget {
   Dashboard({super.key});
@@ -16,43 +16,36 @@ class Dashboard extends StatelessWidget {
       body: Obx(
         () => controller.bottomNavItems[controller.currentIndex.value].view,
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          border: Border(
-            top: BorderSide(color: AppColors.borderColor, width: 0.5),
+      bottomNavigationBar: Obx(
+        () => Container(
+          decoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(color: AppColors.borderColor, width: 0.5),
+            ),
           ),
-        ),
-        child: Row(
-          children: List.generate(
-            controller.bottomNavItems.length,
-            (i) => InkWell(
-              onTap: () {
-                controller.onBottomNavItemTap(i);
-              },
-              child: Obx(
-                () => Container(
-                  width: Get.width / controller.bottomNavItems.length,
-                  padding: EdgeInsets.only(top: 12, bottom: 8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SvgPicture.asset(
-                        controller.bottomNavItems[i].icon,
-                        color: controller.currentIndex.value == i
-                            ? Colors.white
-                            : AppColors.textGrey,
-                      ),
-                      SizedBox(height: 4),
-                      appText(
-                        controller.bottomNavItems[i].title,
-                        color: controller.currentIndex.value == i
-                            ? Colors.white
-                            : AppColors.textGrey,
-                      ),
-                    ],
-                  ),
+          child: BottomNavigationBar(
+            currentIndex: controller.currentIndex.value,
+            onTap: (index) {
+              controller.onBottomNavItemTap(index);
+              controller.update();
+            },
+            type: BottomNavigationBarType.fixed,
+            showSelectedLabels: true,
+            showUnselectedLabels: true,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: AppColors.textGrey,
+            unselectedLabelStyle: GoogleFonts.mulish(color: AppColors.textGrey),
+            selectedLabelStyle: GoogleFonts.mulish(color: Colors.white),
+            backgroundColor: Colors.transparent,
+            items: List.generate(
+              controller.bottomNavItems.length,
+              (i) => BottomNavigationBarItem(
+                icon: SvgPicture.asset(controller.bottomNavItems[i].icon),
+                activeIcon: SvgPicture.asset(
+                  controller.bottomNavItems[i].icon,
+                  color: Colors.white,
                 ),
+                label: controller.bottomNavItems[i].title,
               ),
             ),
           ),
